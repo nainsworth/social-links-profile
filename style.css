@@ -1,22 +1,119 @@
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
+/* Root Variables */
 :root {
   --white: hsl(0, 0%, 100%);
-  --gray: hsl(0, 0%, 50%);
-  --black: hsl(0, 0%, 7%);
-  --yellow: hsl(47, 88%, 63%);
+  --gray: hsl(0, 0%, 20%);
+  --dark-gray: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+  --green: hsl(75, 94%, 57%);
 
-  --font-outfit: "Figtree";
-  --font-regular: 500;
-  --font-bold: 800;
-  --font-size: clamp(10px, 4vw, 16px);
+  --font-family: Inter;
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --font-size: 14px;
+  /* --font-size: clamp(10px, 4vw, 16px); */
 }
 
+/* Styling Reset */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-outfit);
+  font-family: var(--font-family);
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--off-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+p {
+  color: var(--white);
+  font-family: var(--font-regular);
+  font-size: var(--font-size);
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-gray);
+  border-radius: 10px;
+  padding: 40px;
+  gap: 28px;
+  margin: 40px;
+}
+
+/* Profile Image */
+.profile-image {
+  border-radius: 50%;
+  height: 88px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.name {
+  color: var(--white);
+}
+
+.location {
+  color: var(--green);
+  font-weight: var(--font-semi-bold);
+}
+
+/* Links */
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-link {
+  background-color: var(--gray);
+  color: var(--white);
+  text-decoration: none;
+  width: 304px;
+  padding: 14px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: var(--font-bold);
+}
+
+.social-link:hover,
+.social-link:active {
+  background-color: var(--green);
+  color: var(--off-black);
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  color: var(--white);
+}
+.attribution a {
+  color: var(--green);
 }
